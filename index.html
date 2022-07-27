@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Firebase</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  
+  <div id="app">
+    <button id="btn-login">Login con Google</button>
+    <button id="btn-logout" class="hidden">Cerrar sesión</button>
+
+    <form id="todo-form" class="hidden">
+      <div id="user-info"></div>
+      <input 
+        class="hidden"
+        type="text" 
+        id="todo-input" 
+        placeholder="Nuevo todo..." 
+        autocomplete="off"
+        />
+    </form>
+
+    <div id="todos-container"></div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAdmtPl7fUO17l45tJ6c7bzppnCCRbsH-A",
+      authDomain: "todo-1ef60.firebaseapp.com",
+      projectId: "todo-1ef60",
+      storageBucket: "todo-1ef60.appspot.com",
+      messagingSenderId: "1026129952075",
+      appId: "1:1026129952075:web:1d4a349a05e9cc37547cce"
+    };
+  
+    // Initialize Firebase
+    // const app = initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig)
+  </script>
+  
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
